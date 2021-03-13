@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;   
+}
+body{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+/* navbar */
+.nav{
+    /* height: 80px; */
+    /* background-color:; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav h1{
+  padding-left: 40px;  
+  font-family: 'Pacifico', cursive; 
+  margin: 40px;  
+  color: #00bcd4; 
+}
+
+.nav a{
+    padding-right: 40px;
+    color: #00bcd4;
+}
+
+.links{
+    font-size: 20px;
+}
+/* Style the active class (and buttons on mouse-over) */
+.active, .link:hover {
+   text-decoration: underline;
+  }
+
+/* home main content */
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    height: 550px;
+    width: 60%;
+    margin: 0 auto;
+}
+.container img{
+    height: 500px;
+    width: 500px;
+}
+.CTA{
+    /* background-color: red; */
+    padding-left: 50px;
+    width: 400px;
+    
+}
+.CTA p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 45px;
+    margin-top: 25%;
+    padding-left: 50px;
+    
+}
+
+/*table*/
+.zui-table {
+   
+    border-collapse: collapse;
+    border-spacing: 1;
+    font: normal 13px Arial, sans-serif;
+    width: 95%;
+    background-color: white;
+    margin: 0 auto;
+    
+}
+.zui-table thead th {
+    background-color:#0f4c75;   
+    color: white;
+    padding: 10px 30px;
+    font-size: 20px;
+    text-align: center;
+    font-family: '';
+    font-weight: lighter;
+    
+}
+.zui-table tbody td {
+    border: solid  1px #DDEEEE;
+    background-color:#00bcd4;
+    color:white;
+    padding: 5px 15px;
+    user-select: none;
+    font-size: 15px;
+}
+.zui-table tbody td:hover{
+    color: #69779b;
+    background-color: white;
+    font-size: 20px;
+}
+/*Searchbar*/
+.Search-bar{
+   width: 650px;
+   height: 55px;
+   float: left;
+   margin-bottom: 50px;
+   border-radius: 40px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.SB-container{
+    display: flex;
+    justify-content: center;
+}
+/*FORM*/
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.form-group input{
+    width: 700px;
+   margin-bottom: 10px;
+}
+
+/*footer*/
+.footer{
+    background-color: #00bcd4;
+    padding: 10px;
+    margin-top: 10px;
+    height: 50px;
+    color: white;
+    text-align: center;
+  
+}
+/*Search bar*/
+/* Style the search field */
+
+  /* Style the submit button */
+.SB-container button {
+    float: right;
+    width: 55px;
+    height: 55px;
+    margin-left: 10px;
+    background: #00bcd4;
+    color: white;
+    font-size: 15px;
+     border: 0; 
+     border-radius: 50%;
+  }
+  
+.SB-container button:hover {
+    background: #0b7dda;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  /* Clear floats */
+ .SB-container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+ /*Search result error*/
+ .no-data-found{
+    max-width: 500px;
+    max-height: 100px;
+    padding-top: 10px ;
+    border-radius: 20px;
+    height: auto;
+    background-color: #0b7dda;
+    color: white;
+	font-size: 50px;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	text-align: center;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+ } 
