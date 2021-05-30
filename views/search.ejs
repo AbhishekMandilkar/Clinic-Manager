@@ -2,47 +2,50 @@
 
 <!-- Search form -->
 <div class="SB-container">
-    <form action="/search" method="POST">
-        <input class="form-control Search-bar" type="text" placeholder="Search" aria-label="Search" name="query" >
-        <button class="" type="submit"><i class="fas fa-search" name="button"></i></button>
-    </form>
+  <form action="/search" method="POST">
+    <input
+      class="form-control Search-bar"
+      type="text"
+      placeholder="Enter Phone Number to Search"
+      aria-label="Search"
+      name="query"
+    />
+    <button class="" type="submit">
+      <i class="fas fa-search" name="button"></i>
+    </button>
+  </form>
 </div>
-
-<% if(flag) { %>
-    <table class="zui-table">
-        <thead>
-            <tr>
-                <th style="border-radius: 20px 0 0 0;width: 100px;">Name</th>
-                <th>Age</th>
-                <th>Sex</th>
-                <th>Weight</th>
-                <th>Blood Pressure</th>
-                <th>Mobile </th>
-                <th>Prev Visit</th>
-                <th>Complaints</th>
-                <th>Extra Note</th>
-                <th style="border-radius: 0 20px 0 0;">Next Visit</th>
-            </tr>
-        </thead>
-        <tbody>
-           
-            <tr>
-                <td> <%= foundInfo.name %> </td>
-                <td><%= foundInfo.age %></td>
-                <td><%= foundInfo.gender %></td>
-                <td><%= foundInfo.weight %></td>
-                <td><%= foundInfo.bp %></td>
-                <td><%= foundInfo.mobno %></td>
-                <td><%= foundInfo.pVisit %></td>
-                <td><%= foundInfo.complaints %></td>
-                <td><%= foundInfo.extra %></td>
-                <td><%= foundInfo.nVisit %></td>
-            </tr>
-    
-        </tbody>
-    </table>
-    <% } else{  %> 
-        <div class="no-data-found">
-            No data found
-        </div>
-        <%}%>
+<% if (typeof foundInfo == 'object' && foundInfo) { %>
+<table class="zui-table">
+  <thead>
+    <tr>
+      <th style="border-radius: 20px 0 0 0; width: 100px">Name</th>
+      <th>Age</th>
+      <th>Sex</th>
+      <th>Weight</th>
+      <th>Blood Pressure</th>
+      <th>Mobile</th>
+      <th>Prev Visit</th>
+      <th>Complaints</th>
+      <th>Extra Note</th>
+      <th style="border-radius: 0 20px 0 0">Next Visit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= foundInfo.name %></td>
+      <td><%= foundInfo.age %></td>
+      <td><%= foundInfo.gender %></td>
+      <td><%= foundInfo.weight %></td>
+      <td><%= foundInfo.bp %></td>
+      <td><%= foundInfo.mobno %></td>
+      <td><%= foundInfo.pVisit %></td>
+      <td><%= foundInfo.complaints %></td>
+      <td><%= foundInfo.extra %></td>
+      <td><%= foundInfo.nVisit %></td>
+    </tr>
+  </tbody>
+</table>
+<% } else { %>
+<div class="no-data-found">No data found</div>
+<%}%>
